@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class Ex2 {
     public static void main(String[] args) {
-        File inputFile = new File("src/Lab_1/ex2/in.txt"); //declrare si initializare fisiere
-        File outputFile = new File("src/Lab_1/ex2/out.txt");
+        File inputFile = new File("src/Lab_1/Lab_2.ex2/in.txt"); //declrare si initializare fisiere
+        File outputFile = new File("src/Lab_1/Lab_2.ex2/out.txt");
 
         try {
             Scanner scanner = new Scanner(inputFile); //deschidere fisier
