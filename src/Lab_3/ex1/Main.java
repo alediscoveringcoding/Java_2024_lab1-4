@@ -22,7 +22,6 @@ public class Main {
             System.out.println(parabola1);
             System.out.println(parabola2);
         } catch (Exception e) {
-            // Handle unexpected errors
             System.err.println("Error: " + e.getMessage());
             e.printStackTrace();
         }

@@ -7,7 +7,7 @@ import java.util.stream.*;
 
 public class Cantec {
         public static void main(String[] args) {
-            String grupareFinala = "ing"; // Gruparea de litere de verificat
+            String grupareFinala = "ing"; //gruparea de litere de verificat
             List<Vers> versuri = new ArrayList<>();
 
             try (Stream<String> stream = Files.lines(Paths.get("src/Lab_2/ex2/cantec_in.txt"))) {
@@ -24,7 +24,7 @@ public class Cantec {
                     String versText = eCuMajuscule ? vers.toString().toUpperCase() : vers.toString();
                     long nrCuvinte = vers.getNumarCuvinte();
                     long nrVocale = vers.getNumarVocale();
-                    String linieFinala = versText + " | Cuvinte: " + nrCuvinte + ", Vocale: " + nrVocale;
+                    String linieFinala = versText + " Cuvinte " + nrCuvinte + ", Vocale " + nrVocale;
 
                     if (vers.seIncheieCu(grupareFinala)) {
                         linieFinala += " *";

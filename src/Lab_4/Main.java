@@ -6,27 +6,25 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-
-    // Meniu
     public static void meniu() {
-        System.out.println("Meniu. Alege optiunea: ");
-        System.out.println("1. Afişarea tuturor echipamentelor: ");
-        System.out.println("2. Afişarea imprimantelor: ");
-        System.out.println("3. Afişarea copiatoarelor: ");
-        System.out.println("4. Afişarea sistemelor de calcul: ");
-        System.out.println("5. Modificarea stării în care se află un echipament : ");
-        System.out.println("6. Setarea unui anumit mod de scriere pentru o imprimantă: ");
-        System.out.println("7. Setarea unui format de copiere pentru copiatoare : ");
-        System.out.println("8. Instalarea unui anumit sistem de operare pe un sistem de calcul : ");
-        System.out.println("9. Afişarea echipamentelor vândute : ");
-        System.out.println("0. Ieșire");
+        System.out.println("Meniu Alege optiunea ");
+        System.out.println("1 afisarea tuturor echipamentelor");
+        System.out.println("2 afisarea imprimantelor ");
+        System.out.println("3 afisarea copiatoarelor ");
+        System.out.println("4 afisarea sistemelor de calcul ");
+        System.out.println("5 modificarea starii  ");
+        System.out.println("6 Setarea unui anumit mod de scriere pentru imprimanta ");
+        System.out.println("7 Setarea unui format de copiere pentru copiatoare  ");
+        System.out.println("8 Instalarea unui anumit sistem de operare ");
+        System.out.println("9 afisarea echipamentelor vandute  ");
+        System.out.println("0 Exit");
         System.out.println("\n");
     }
 
     // Citirea datelor din fișier
     public static void citiredinfisier(List<Echipament> echipamente) {
         try {
-            File file = new File("src/Lab_4/echipamente.txt"); // Calea către fișier
+            File file = new File("src/Lab_4/echipamente.txt");
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;
             while ((line = br.readLine()) != null) {
@@ -34,7 +32,6 @@ public class Main {
 
 
                 //String denumire, int nr_inv, int pret, Zona_mag zona,Situatie situatie
-                // Atribute comune
                 String denumire = split[0].trim();
                 int nr_inv = Integer.parseInt(split[1].trim());
                 int pret = Integer.parseInt(split[2].trim());
@@ -114,19 +111,18 @@ public class Main {
                 .forEach(System.out::println);
     }
 
-    // Programul principal
     public static void main(String[] args) throws IOException {
         List<Echipament> echi = new ArrayList<>();
         meniu();
         citiredinfisier(echi);
         Scanner scan = new Scanner(System.in);
-        int optiune;
+        int opt;
 
         do {
 
-            optiune = scan.nextInt();
+            opt = scan.nextInt();
 
-            switch (optiune) {
+            switch (opt) {
                 case 0:
                     System.out.println("Ieșire din program.");
                     break;
@@ -148,10 +144,10 @@ public class Main {
                 break;
 
                 default:
-                    System.out.println("Opțiune invalidă.");
+                    System.out.println("nu exista");
 
             }
-        } while (optiune != 0);
+        } while (opt != 0);
 
         scan.close();
     }

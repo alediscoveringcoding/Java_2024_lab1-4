@@ -10,24 +10,24 @@ public class Main {
         String[] judete = citesteJudete("src/Lab_2/ex1/judete_in.txt");
 
         if (judete != null) {
-            Arrays.sort(judete); // Sortăm județele în ordine alfabetică
+            Arrays.sort(judete); //sortam judetele în ordine alfabetica
 
-            // Afișăm județele ordonate
-            System.out.println("Județele ordonate alfabetic:");
-            for (String judet : judete) {
-                System.out.println(judet);
+            //afisam judetele ordonate
+            System.out.println("judetele în ordine alfabetica");
+            for (String j : judete) {
+                System.out.println(j);
             }
 
-            // Căutăm județul introdus de la tastatură
+            //cautam județul
             Scanner scanner = new Scanner(System.in);
-            System.out.print("\nIntroduceți județul căutat: ");
+            System.out.print("\nIntroduceți judetul pe care il cauti ");
             String judetCautat = scanner.nextLine();
 
             int pozitie = Arrays.binarySearch(judete, judetCautat);
             if (pozitie >= 0) {
-                System.out.println("Județul '" + judetCautat + "' se află pe poziția " + (pozitie + 1) + " în lista ordonată.");
+                System.out.println("judetul '" + judetCautat + "' se află pe poz " + (pozitie + 1));
             } else {
-                System.out.println("Județul '" + judetCautat + "' nu a fost găsit în lista ordonată.");
+                System.out.println("judetul '" + judetCautat + "' nu a fost găsit");
             }
         }
 

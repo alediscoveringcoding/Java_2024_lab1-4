@@ -57,39 +57,37 @@ class Persoana {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
 
-            System.out.println("Introduceți numărul de persoane:");
+            System.out.println("introduceti nr de persoane");
             int n = scanner.nextInt();
-            scanner.nextLine(); // Consumă newline
+            scanner.nextLine();
 
             Persoana[] persoane = new Persoana[n];
 
             for (int i = 0; i < n; i++) {
-                System.out.println("Introduceți numele persoanei " + (i + 1) + ":");
+                System.out.println("introduceti numele persoanei " + (i + 1));
                 String nume = scanner.nextLine();
 
                 String cnp;
                 boolean cnpValid = false;
                 do {
-                    System.out.println("Introduceți CNP-ul persoanei " + (i + 1) + ":");
+                    System.out.println("introduceti CNP persoanei " + (i + 1) + ":");
                     cnp = scanner.nextLine();
                     cnpValid = isValidCNP(cnp);
                     if (!cnpValid) {
-                        System.out.println("CNP-ul introdus este invalid. Reintroduceți.");
+                        System.out.println("CNP introdus este invalid");
                     }
                 } while (!cnpValid);
 
                 persoane[i] = new Persoana(nume, cnp);
             }
-
-            System.out.println("Informațiile introduse sunt:");
             for (Persoana persoana : persoane) {
-                System.out.println("Nume: " + persoana.getNume());
-                System.out.println("CNP: " + persoana.getCnp());
-                System.out.println("Sex: " + (persoana.getSex() == '1' || persoana.getSex() == '5' ? "Masculin" : "Feminin"));
-                System.out.println("Varsta: " + persoana.getVarsta());
-                System.out.println("Anul Nasterii: " + persoana.getAnNastere());
-                System.out.println("Luna Nasterii: " + persoana.getLunaNastere());
-                System.out.println("Ziua Nasterii: " + persoana.getZiuaNastere());
+                System.out.println("nume " + persoana.getNume());
+                System.out.println("CNP " + persoana.getCnp());
+                System.out.println("sex " + (persoana.getSex() == '1' || persoana.getSex() == '5' ? "masculin" : "feminin"));
+                System.out.println("varsta " + persoana.getVarsta());
+                System.out.println("anul nasterii: " + persoana.getAnNastere());
+                System.out.println("luna nasterii: " + persoana.getLunaNastere());
+                System.out.println("ziua nasterii: " + persoana.getZiuaNastere());
                 System.out.println();
             }
         }

@@ -10,13 +10,13 @@ public class ex4 {
             int num1 = random.nextInt(30) + 1; //folosim random din nou
             int num2 = random.nextInt(30) + 1;
 
-            System.out.println("Numărul 1: " + num1);
-            System.out.println("Numărul 2: " + num2);
+            System.out.println("numarul 1: " + num1);
+            System.out.println("numarul 2: " + num2);
 
             int a=num1;
             int b=num2;
             while(b != 0) {
-                int r = a % b; //Restul împărțirii lui a la b
+                int r = a % b; //restul impartirii lui a la b
                 a = b;
                 b = r;
             }

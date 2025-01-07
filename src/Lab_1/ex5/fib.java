@@ -8,16 +8,16 @@ public class fib {
             Random random = new Random();
             int num1 = random.nextInt(20) + 1;
 
-            System.out.println("Numărul 1: " + num1);
+            System.out.println("numarul 1: " + num1);
             int n=num1;
             if(n == 1) { //Caz particular
                 System.out.println("DA");
             } else
             {
-                //Generăm șirul Fibonacci pentru a verifica dacă n face parte din șir
-                //Îl vom genera cu trei variabile: c = fn, b = fn-1, a = fn-2
+                //generam șirul Fibonacci pentru a verifica dacă n face parte din sir
+                //c = fn, b = fn-1, a = fn-2
                 int a = 1, b = 1, c;
-                int esteTermenFib = 0; //În caz că nu este termen Fibonacci, să afișăm NU la final
+                int esteTermenFib = 0; //in caz că nu este termen Fibonacci, afisam NU la final
                 do {
                     c = a + b;
                     a = b;
