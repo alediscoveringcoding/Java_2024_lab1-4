@@ -1,21 +1,21 @@
 package Lab_4;
 
-public class Sisteme extends Echipament{
+public class Sisteme extends Echipament {
 
-    enum SO{WINDOWS, LINUX}
+    enum SO {WINDOWS, LINUX}
 
     private String tip_m;
-    private int viteza;
+    private double viteza;
     private int capacitate;
     private SO operare;
 
-    public Sisteme(String denumire, int nr_inv, int pret, Zona_mag zona,Situatie situatie, String tip_m, int viteza, int capacitate, SO operare)
-    {
-        super(denumire, nr_inv, pret, zona,situatie);
-        this.tip_m=tip_m;
-        this.viteza=viteza;
-        this.capacitate=capacitate;
-        this.operare=operare;
+
+    public Sisteme(String denumire, int nr_inv, int pret, Zona_mag zona, Situatie situatie, String tip_m, double viteza, int capacitate, SO operare) {
+        super(denumire, nr_inv, pret, zona, situatie);
+        this.tip_m = tip_m;
+        this.viteza = viteza;
+        this.capacitate = capacitate;
+        this.operare = operare;
     }
 
     public String getTip_m() {
@@ -26,11 +26,11 @@ public class Sisteme extends Echipament{
         this.tip_m = tip_m;
     }
 
-    public int getViteza() {
+    public double getViteza() {
         return viteza;
     }
 
-    public void setViteza(int viteza) {
+    public void setViteza(double viteza) {
         this.viteza = viteza;
     }
 
